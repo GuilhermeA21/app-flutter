@@ -1,0 +1,84 @@
+import 'package:flutter/material.dart'; //importação do material Design
+
+void main() {
+  runApp(MaterialApp(
+    title: "Meu App Flutter"
+    //home tela inicial
+    home:Container(
+      color: Colors.cyan,
+      child:Column(//componentes um abaixo do outro
+        children: <Widget>[
+          
+          FlatButton(
+            onPressed:(){
+              print("Você ativou o botão")
+          },
+          child: Text(
+            "Botão",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.black,
+              decoration: TextDecoration.none,
+            ),
+          ),
+          )
+        ],
+      ),
+    ),
+
+  ));
+}
+
+
+import ag:flutter/material.dart';
+
+void main() {
+
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("Meu app Flutter")
+        backgroundColor: Colors.blue,
+      ),
+      body: Text("Elementos do app")
+      bottomNavigationBar: BottomAppBar()
+    ),
+  )
+  );
+}
+----------------------------------------------
+
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("Meu aplicativo com flutter"),
+        backgroundColor: Colors.blue,//cor da barra de fundo
+      ),
+      body: Padding(
+        
+        padding: EdgeInsets.all(30),
+        child: Text("contéudo do App"),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.blue,
+        child:Padding(
+          padding: EdgeInsets.all(30),
+          child: Row(
+            children:<Widget>[
+              Text("Feito por Andreza Barcaro"),
+            ],
+          ),
+        ),
+
+      ),
+      
+    ),
+  )
+  );
+}
